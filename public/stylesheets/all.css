@@ -1,0 +1,56 @@
+body { 
+  background: url(http://static.tumblr.com/z7lhmdl/mgVkwsss8/bg.png) #8f9595 repeat-x fixed;
+}
+
+.block {
+  box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+  -webkit-transition-duration: 0.2s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.block:hover {
+  box-shadow: 0px 0px 20px rgba(0,235,255,0.8);
+  -webkit-box-shadow: 0px 0px 20px rgba(0,235,255,0.8);
+  -moz-box-shadow: 0px 0px 20px rgba(0,235,255,0.8);
+}
+
+#edge-badge {
+  border:medium none;
+  position:fixed;
+  right:0;
+  top:0;
+  z-index:100;
+}
+
+#nav {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background:url("/images/top_menu_bg.png") repeat-x scroll left top #7DB261;
+  border-left:1px solid #A5E78B;
+  border-right:1px solid #A5E78B;
+  border-bottom:1px solid #A5E78B;
+  color:#3D721D;
+  font-size:16px;
+  position:fixed;
+  left:270px;
+  top:0;
+  margin:0 auto;
+  padding:10px 20px;
+  z-index:100;
+}
+
+#nav .nav_item {
+  color:#FFF;
+  display:inline-block;
+  margin-left:10px;
+  padding:3px 8px 2px;
+  text-decoration:none;
+}
+#nav .nav_item:hover {
+  color:#EDE7F0;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fancyoung</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <%= stylesheet_link_tag "scaffold", "style" %>
+  <%= stylesheet_link_tag "http://github.com/joshuaclayton/blueprint-css/raw/master/blueprint/screen.css", :media=>"screen, projection" %>
+  <%= stylesheet_link_tag "http://github.com/joshuaclayton/blueprint-css/raw/master/blueprint/print.css", :media=>"print" %>
+  <%= stylesheet_link_tag "handheld", :media=>"handheld" %>
+  <!--[if lt IE 8]>
+    <%= stylesheet_link_tag "http://github.com/joshuaclayton/blueprint-css/raw/master/blueprint/ie.css", :media=>"screen, projection" %>
+  <![endif]-->
+
+  <%= stylesheet_link_tag "all" %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <div id="container" class="container showgrid_">
+    <div>
+      <img id="edge-badge" alt="edge-badge" src="/images/edge_badge.png">
+    </div>
+    <div id="nav">
+      <%= link_to "Blog", users_path, :class => "nav_item" %>
+    </div>
+    <div id="header">
+      <div class="span-12">
+        <a href="/"><h1>Fancyoung</h1></a>
+      </div>
+      <div class="span-9 append-3 last" style="text-align:right;">
+        <%= pluralize User.logged_in.count, "user" %> users online
+        <% if current_user %>
+          <%= link_to "Account(#{current_user[:login]})", users_path %>
+          <%= link_to "Logout", logout_path %>
+        <% else%>
+          <%= link_to "Register", new_user_path %>
+          <%= link_to "Login", login_path %>
+        <% end%>
+      </div>
+      <hr />
+    </div>
+    <div id="main">
+      <div class="span-6 block">
+        aa
+      </div>
+      <div class="span-18 last">
+      <!-- <div class="success">Success</div> -->
+      <!-- <div class="error">Error</div> -->
+      <!-- <div class="notice">Notice</div> -->
+      <% if flash[:success] %>
+        <div class="success"><%= flash[:success] %></div>
+      <% end %>
+      <% if flash[:error] %>
+        <div class="error"><%= flash[:error] %></div>
+      <% end %>
+      <% if flash[:notice] %>
+        <div class="notice"><%= flash[:notice] %></div>
+      <% end %>
+      <%= yield %>
+      </div>
+    </div>
+    <div id="footer" style="text-align:center">
+      <hr />
+      <a href="http://www.fancyoung.com">Fancyoung</a>
+      <br />
+      Copyright 2011
+    </div>
+  </div>
+</body>
+</html>
