@@ -1,3 +1,4 @@
+# coding: utf-8
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,32 +28,57 @@
     </div>
     <div id="nav">
       <ul>
-      <li><%= link_to "HOME", root_path %></li>
-      <li><%= link_to "SERIES", series_index_path %></li>
-      <li><%= link_to "MY ROOM", root_path %></li>
-      <li><%= link_to "ACCOUNT", account_path %></li>
-      <li><%= link_to "ADMIN", account_list_path %></li>
+      <li><%= link_to "首页", root_path %></li>
+      <li><%= link_to "剧集", series_index_path %></li>
+      <li><%= link_to "我的空间", root_path %></li>
+      <li><%= link_to "帐号", account_path %></li>
+      <li><%= link_to "系统", account_list_path %></li>
       </ul>
     </div>
     <div id="header">
       <div class="span-12">
-        <a href="/"><h1>Fancyoung</h1></a>
+        <a href="/"><h1>连载ING</h1></a>
       </div>
       <div class="span-9 append-3 last" style="text-align:right;">
-        <%= pluralize User.logged_in.count, "user" %> users online
+        <%= pluralize User.logged_in.count, "位" %>用户在线
         <% if current_user %>
-          <%= link_to "Account(#{current_user[:login]})", account_path %>
-          <%= link_to "Logout", logout_path %>
+          <%= link_to "帐号(#{current_user[:login]})", account_path %>
+          <%= link_to "退出", logout_path %>
         <% else %>
-          <%= link_to "Register", new_account_path %>
-          <%= link_to "Login", login_path %>
+          <%= link_to "注册", new_account_path %>
+          <%= link_to "登录", login_path %>
         <% end %>
       </div>
       <hr />
     </div>
     <div id="main">
-      <div class="span-6 block">
-        aa
+      <div class="span-6">
+        <div class="block">
+          你喜欢看美剧，小说，动漫么？<br />
+          到这里来记录你的进度吧：）
+        </div>
+        <div class="block">
+          <ul>
+            <li>XXX看了《超市特工》第四季第10集</li>
+            <li>XXX看了《海贼王》漫画608话《海底乐园》</li>
+            <li>XXX看了《海贼王》动画480话</li>
+            <li>XXX看了。。。</li>
+          </ul>
+        </div>
+        <div class="block">
+          <ul>
+            <li>《超市特工》S4E11将于2011年1月18日播出</li>
+            <li>XXX太监了</li>
+            <li>《斗破苍穹》更新1140章</li>
+          </ul>
+        </div>
+        <div class="block">
+          <ul>
+             <li>XXX说：这集太扯了</li>
+             <li>XXX说：快点更新啊</li>
+             <li>XXX说：太搞笑了</li>
+           </ul>
+        </div>
       </div>
       <div class="span-18 last">
       <!-- <div class="success">Success</div> -->

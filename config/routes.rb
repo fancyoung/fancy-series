@@ -2,7 +2,7 @@ Fancyoung::Application.routes.draw do
   get 'home/index'
 
   resource :user_session
-
+  
   resource :account, :controller => "users"
   get 'account/list'
   resources :users
@@ -15,7 +15,7 @@ Fancyoung::Application.routes.draw do
   resources :series do
     resources :seasons
   end
-
+  
   root :to => 'home#index'
 
   # The priority is based upon order of creation:
