@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @series.name %>
+</p>
+
+<p>
+  <b>Name2:</b>
+  <%= @series.name2 %>
+</p>
+
+<p>
+  <b>Des:</b>
+  <%= @series.des %>
+</p>
+
+<p>
+  <b>Ref:</b>
+  <%= @series.ref %>
+</p>
+
+<p>
+  <b>Is closed:</b>
+  <%= @series.is_closed %>
+</p>
+
+<p>
+  <b>Create by:</b>
+  <%= @series.create_by %>
+</p>
+
+<p>
+  <b>Update by:</b>
+  <%= @series.update_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_series_path(@series) %> |
+<%= link_to 'Back', series_index_path %>

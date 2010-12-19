@@ -1,0 +1,16 @@
+<ul>
+  <% @series.each do |series| %>
+  <li>
+    <span><%= series.name %></span>
+    <span>(<%= series.name2 %>)</span>
+    <br />
+    <span>des:<%= series.des %></span>
+    <br />
+    <span>ref:<%= series.ref %></span>
+    <span><%= series.is_closed %></span>
+    <span><%= series.create_by %></span>
+    <span><%= series.update_by %></span>
+
+  </li>
+  <% end %>
+</ul>
