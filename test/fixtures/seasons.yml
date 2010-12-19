@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  series: 
+  seq: 1
+  name: MyString
+  name2: MyString
+  des: MyText
+  ref: MyText
+  is_closed: false
+  create_by: 1
+  update_by: 1
+
+two:
+  series: 
+  seq: 1
+  name: MyString
+  name2: MyString
+  des: MyText
+  ref: MyText
+  is_closed: false
+  create_by: 1
+  update_by: 1

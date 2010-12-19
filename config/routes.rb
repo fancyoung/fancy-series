@@ -12,7 +12,9 @@ Fancyoung::Application.routes.draw do
   match 'logout' => 'user_sessions#destroy', :as => :logout
 
   get 'series/manage'
-  resources :series
+  resources :series do
+    resources :seasons
+  end
 
   root :to => 'home#index'
 

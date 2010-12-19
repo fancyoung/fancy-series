@@ -1,9 +1,8 @@
-<%= form_for(@series) do |f| %>
+<%= form_for ([@series, @series.seasons.build]) do |f| %>
 <fieldset>
   <% if @series.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@series.errors.count, "error") %> prohibited this series from being saved:</h2>
-
       <ul>
       <% @series.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -11,22 +10,14 @@
       </ul>
     </div>
   <% end %>
-
+  
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :seq %><br />
+    <%= f.text_field :seq %>
   </div>
   <div class="field">
-    <%= f.label :name2 %><br />
-    <%= f.text_field :name2 %>
-  </div>
-  <div class="field">
-    <%= f.label :des %><br />
-    <%= f.text_area :des %>
-  </div>
-  <div class="field">
-    <%= f.label :ref %><br />
-    <%= f.text_area :ref %>
+    <%= f.label :episodes_count %><br />
+    <%= f.text_field :episodes_count %>
   </div>
   <div class="field">
     <%= f.label :is_closed %><br />

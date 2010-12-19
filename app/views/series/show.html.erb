@@ -35,6 +35,11 @@
   <%= @series.update_by %>
 </p>
 
+<h2>Seasons</h2>
+<%= render :partial => "seasons/season",
+    :collection => @series.seasons %>
+<h2>Add a season:</h2>
+<%= render "seasons/form" %>
 
 <%= link_to 'Edit', edit_series_path(@series) %> |
 <%= link_to 'Back', series_index_path %>
