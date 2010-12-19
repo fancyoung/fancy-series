@@ -1,7 +1,12 @@
 body { 
   background: url(http://static.tumblr.com/z7lhmdl/mgVkwsss8/bg.png) #8f9595 repeat-x fixed;
 }
-
+/*
+body {
+background: #7DA6E3 url(http://aws.cachefly.net/aws/images/starfield.jpg) repeat-x fixed;
+color:white;
+}
+*/
 .block {
   box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
   -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
@@ -27,6 +32,7 @@ body {
   z-index:100;
 }
 
+/*
 #nav {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -43,6 +49,38 @@ body {
   padding:10px 20px;
   z-index:100;
 }
+*/
+#nav {
+height: 51px;
+position: fixed;
+width: 918px;
+background: url(/images/nav-bg.png) no-repeat;
+font-size: 12px;
+}
+#nav ul{
+list-style: none;
+margin: 11px 0 0 25px;
+padding: 0;
+}
+#nav ul li{
+float: left;
+margin-right: 20px;
+}
+#nav a {
+color: #A0A7B2;
+text-decoration: none;
+border-style: none;
+font-size: 13px;
+line-height: 12px;
+}
+#nav a:hover {
+color: #fff;
+}
+
+#nav a.current {
+color: #E5E5E5;
+font-size: 14px;
+}
 
 #nav .nav_item {
   color:#FFF;
@@ -53,4 +91,8 @@ body {
 }
 #nav .nav_item:hover {
   color:#EDE7F0;
+}
+
+#header {
+  padding-top:60px;
 }

@@ -31,6 +31,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def require_admin
+    unless current_user && current_user.login == 'siyang1982'
+      flash[:notice] = "You are not admin!!!"
+      redirect_to root_url
+      return false
+    end
+  end
+
   def store_location
     session[:return_to] = request.request_uri
   end

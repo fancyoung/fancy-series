@@ -1,16 +1,17 @@
 Fancyoung::Application.routes.draw do
-  get "home/index"
+  get 'home/index'
 
   resource :user_session
 
   resource :account, :controller => "users"
   resources :users
-  resources :user_sessions
+  match 'account/list' => 'users#list'
 
+  resources :user_sessions
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
 
-  root :to => "home#index"
+  root :to => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

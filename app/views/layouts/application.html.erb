@@ -26,7 +26,13 @@
       <img id="edge-badge" alt="edge-badge" src="/images/edge_badge.png">
     </div>
     <div id="nav">
-      <%= link_to "Blog", users_path, :class => "nav_item" %>
+      <ul>
+      <li><%= link_to "HOME", root_path %></li>
+      <li><%= link_to "SERIES", root_path %></li>
+      <li><%= link_to "MY ROOM", root_path %></li>
+      <li><%= link_to "ACCOUNT", account_path %></li>
+      <li><%= link_to "ADMIN", account_list_path %></li>
+      </ul>
     </div>
     <div id="header">
       <div class="span-12">
@@ -35,12 +41,12 @@
       <div class="span-9 append-3 last" style="text-align:right;">
         <%= pluralize User.logged_in.count, "user" %> users online
         <% if current_user %>
-          <%= link_to "Account(#{current_user[:login]})", users_path %>
+          <%= link_to "Account(#{current_user[:login]})", account_path %>
           <%= link_to "Logout", logout_path %>
-        <% else%>
-          <%= link_to "Register", new_user_path %>
+        <% else %>
+          <%= link_to "Register", new_account_path %>
           <%= link_to "Login", login_path %>
-        <% end%>
+        <% end %>
       </div>
       <hr />
     </div>

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => [:show, :edit, :update]
+  before_filter :require_admin, :only => [:list]
 
   def new
     @user = User.new
@@ -32,5 +33,9 @@ class UsersController < ApplicationController
     else
       render :action => :edit
     end
+  end
+
+  def list
+    @users = User.all
   end
 end
