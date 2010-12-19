@@ -10,7 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101218152606) do
+ActiveRecord::Schema.define(:version => 20101219052108) do
+
+  create_table "series", :force => true do |t|
+    t.string   "name"
+    t.string   "name2"
+    t.text     "des"
+    t.text     "ref"
+    t.boolean  "is_closed"
+    t.integer  "create_by"
+    t.integer  "update_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login",                              :null => false

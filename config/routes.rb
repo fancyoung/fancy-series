@@ -4,12 +4,15 @@ Fancyoung::Application.routes.draw do
   resource :user_session
 
   resource :account, :controller => "users"
+  get 'account/list'
   resources :users
-  match 'account/list' => 'users#list'
 
   resources :user_sessions
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
+
+  get 'series/manage'
+  resources :series
 
   root :to => 'home#index'
 
