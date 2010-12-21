@@ -1,11 +1,11 @@
 class CreateSeries < ActiveRecord::Migration
   def self.up
     create_table :series do |t|
+      t.boolean :is_closed
       t.string :name
       t.string :name2
       t.text :des
       t.text :ref
-      t.boolean :is_closed
       t.integer :create_by
       t.integer :update_by
 
