@@ -10,7 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101219080954) do
+ActiveRecord::Schema.define(:version => 20101221152317) do
+
+  create_table "episodes", :force => true do |t|
+    t.integer  "season_id"
+    t.integer  "seq"
+    t.boolean  "is_shown"
+    t.string   "name"
+    t.string   "name2"
+    t.text     "des"
+    t.text     "ref"
+    t.integer  "create_by"
+    t.integer  "update_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "seasons", :force => true do |t|
     t.integer  "series_id"

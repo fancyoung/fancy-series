@@ -6,4 +6,5 @@ class Season < ActiveRecord::Base
   validates :episodes_count, :presence => true,
                         :numericality => true
   belongs_to :series
+  has_many :episodes, :dependent => :destroy
 end

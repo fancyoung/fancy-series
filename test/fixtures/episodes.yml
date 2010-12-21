@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  season: 
+  seq: 1
+  is_shown: false
+  name: MyString
+  name2: MyString
+  des: MyText
+  ref: MyText
+  create_by: 1
+  update_by: 1
+
+two:
+  season: 
+  seq: 1
+  is_shown: false
+  name: MyString
+  name2: MyString
+  des: MyText
+  ref: MyText
+  create_by: 1
+  update_by: 1

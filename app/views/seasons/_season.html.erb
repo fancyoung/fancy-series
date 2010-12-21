@@ -1,7 +1,13 @@
+# coding: utf-8
 <div>
   <span><%= season.seq %></span>
   <span><%= season.episodes_count %></span>
   <span><%= season.is_closed %></span>
   <span><%= season.name %></span>
   <span><%= season.name2 %></span>
+  <span><%= link_to '编辑', edit_series_season_path(season.series, season) %>
+  <span><%= link_to '删除', [season.series, season],
+              :confirm => '确定删除？',
+              :method => :delete %></span>
+
 </div>
